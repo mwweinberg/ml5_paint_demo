@@ -40,7 +40,6 @@ let angle = 0;
 //new
 let img;
 function preload() {
-  img = loadImage('assets/flower0.jpg');
   // Load a sound file
   song = loadSound('assets/theme.mp3');
 }
@@ -63,8 +62,6 @@ function setup() {
   // Hide the video element, and just show the canvas
   video.hide();
 
-  //image(img, 0, 0);
-
   // Loop the sound forever
   // (well, at least until stop() is called)
   //song.loop();
@@ -82,7 +79,6 @@ function mousePressed(){
 function draw() {
 
   image(video, 0, 0, width, height);
-  //image(img, 0, 0);
 
   if (poses.length > 0) {
     let pose = poses[0].pose;
@@ -100,37 +96,5 @@ function draw() {
     fill(0);
     ellipse(nose.x + xoff, nose.y + yoff, val, val);
   }
-  fill(255);
-  ellipse(mouseX, mouseY, 2, 2);
-
-
-  // loadPixels();
-  //   for (let x = 0; x < width; x++) {
-  //   for (let y = 0; y < height; y++) {
-  //     // Calculate the 1D location from a 2D grid
-  //     let loc = (x + y * width) * 4;
-  //     // Get the R,G,B values from image
-  //     let r, g, b;
-  //     r = pixels[loc];
-  //     // Calculate an amount to change brightness based on proximity to the mouse
-  //     let maxdist = 50; //this controls the size of the circle
-  //     //flips (or re-flips) the x number so the circle follows your face from left to right (default is mirrored movement)
-  //     let fixed_nose_x = map(nose.x, 0, width, width, 0);
-  //     let d = dist(x, y, fixed_nose_x, nose.y);
-  //     let adjustbrightness = (255 * (maxdist - d)) / maxdist;//the first number controls how bright/washed out the center is
-  //     r += adjustbrightness;
-  //     // Constrain RGB to make sure they are within 0-255 color range
-  //     r = constrain(r, 0, 255);
-  //     // Make a new color and set pixel in the window
-  //     //color c = color(r, g, b);
-  //     let pixloc = (y * width + x) * 4;
-  //     pixels[pixloc] = r;
-  //     pixels[pixloc + 1] = r;
-  //     pixels[pixloc + 2] = r;
-  //     pixels[pixloc + 3] = 255;
-  //   }
-  // }
-  // updatePixels();
-
 
 }

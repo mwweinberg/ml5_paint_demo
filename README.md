@@ -1,2 +1,2 @@
-# camp_spy
-using p5 and ml5 to highlight parts of an image based on body tracking
+# Paint Demo Video On
+This demo used ml5 to control a p5js demo. This demo includes realtime video of the subject
